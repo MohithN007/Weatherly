@@ -70,49 +70,32 @@ let horizontalDetails = [{
 
 
   return (<div>
-    <div className='flex items-center justify-center py-6 text-2xl text-cyan-300'>
+     <div className='flex items-center justify-center py-6 text-2xl text-cyan-300'>
         <p>{details}</p>
         
     </div>
-    <div className='flex flex-row items-center justify-between py-3'>
-        <img src={icon} alt="weather-icon" className='w-20'/>
-        <p className='text-5xl'>{temp.toFixed()}°</p>
-        <div className='flex flex-col space-y-3 items-start'>
-            {verticalDetails.map((details) => {
-                let Icon = details.Icon
-                return (
-                    <div key={details.id} className='flex font-light text-sm items-center justify-center'>
-                        <Icon size={18} className='mr-1'/>{details.title}: <span className='font-medium ml-1'>{details.value}</span>
-                    </div>
-                )
-            })}
-            
-          
+  <div className="flex flex-col sm:flex-row items-center justify-between py-3 gap-4">
+    <img src={icon} alt="weather-icon" className="w-16 sm:w-20" />
+    <p className="text-4xl sm:text-5xl">{temp.toFixed()}°</p>
+    <div className="flex flex-col space-y-2 items-start text-sm">
+      {verticalDetails.map((d) => (
+        <div key={d.id} className="flex items-center">
+          <d.Icon size={18} className="mr-1" /> {d.title}: <span className="font-medium ml-1">{d.value}</span>
         </div>
-
-
+      ))}
     </div>
-   
-        <div className='flex flex-row items-center justify-center space-x-10 text-sm py-3'>
-            {
-                horizontalDetails.map((d) => {
-               let Icon = d.Icon
-                   
-                        return(<div key={d.id} className='flex flex-row items-center'>
-                            <Icon size={30} />
-                            <p className='font-light ml-1'>
-                                {d.title}:
-                                <span className='font-medium ml-1'>{d.value}</span>
-                            </p>
-                        </div>)
-                    
-                })
-            }
-            
-
-       
-    </div>
-    </div>
+  </div>
+  
+  <div className="flex flex-wrap items-center justify-center gap-6 text-sm py-3">
+    {horizontalDetails.map((d) => (
+      <div key={d.id} className="flex items-center">
+        <d.Icon size={24} />
+        <p className="ml-1">{d.title}: <span className="font-medium ml-1">{d.value}</span></p>
+      </div>
+    ))}
+  </div>
+  </div>
+  
   )
 }
 

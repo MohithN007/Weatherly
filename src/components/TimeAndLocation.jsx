@@ -4,18 +4,11 @@ const TimeAndLocation = ({weather:{formattedLocalTime,name,country},h}) => {
 
   console.log(h)
   return (
-    <div>
-    <div className='flex items-center justify-center  my-6'><p className='text-xl font-extralight'>
-      
-       {formattedLocalTime}
-        </p>
-        
-    </div>
-    <div className='flex items-center justify-center my-3'>
-    <p className='text-3xl font-medium'>
-        {name},{country}</p>
+    <div className="text-center my-6">
+  <p className="text-lg sm:text-xl font-light">{formattedLocalTime}</p>
+  <p className="text-2xl sm:text-3xl font-medium mt-2">{name}, {country}</p>
 </div>
-</div>
+
   )
 }
 

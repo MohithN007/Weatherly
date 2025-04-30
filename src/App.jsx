@@ -57,8 +57,8 @@ const formatBackground=()=>{
 
   return (<>
     <div className={`bg-gradient-to-br ${formatBackground()}backdrop-blur-md  bg-black/10 w-full h-full flex flex-col justify-center items-center`}>
-      <div className={`mx-auto max-w-screen-lg mt-10 px-32 py-5 shadow-xl
-        shadow-gray-400 bg-gradient-to-br ${formatBackground()} `}>
+    <div className={`mx-auto w-full sm:max-w-screen-md md:max-w-screen-lg px-4 sm:px-8 py-5 shadow-xl bg-gradient-to-br ${formatBackground()} rounded-lg`}>
+
               <TopButtons setQuery={setQuery}/>
             <Inputs setQuery={setQuery} setUnits={setUnits}/>
               {weather && <>  

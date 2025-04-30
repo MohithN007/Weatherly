@@ -21,18 +21,18 @@ const TopButtons = (props) => {
         city: "Paris",
             id:5
 }]
-  return (<div className=' flex  justify-around my-6'>
+  return (<div className="flex flex-wrap justify-center sm:justify-around gap-2 my-6">
     {Topbt.map((b) => (
-     (<button key={b.id} className='text-lg  hover:bg-gray-700/20 px-3 py-2
-     rounded-md transition ease-in'
-     onClick={()=>props.setQuery({q:b.city})}
-     
-     >
+      <button
+        key={b.id}
+        className="text-base sm:text-lg hover:bg-gray-700/20 px-3 py-2 rounded-md transition"
+        onClick={() => props.setQuery({ q: b.city })}
+      >
         {b.city}
-        </button>)
-    )
-    )}
-       </div>)
+      </button>
+    ))}
+  </div>
+  )
 }
 
 export default TopButtons

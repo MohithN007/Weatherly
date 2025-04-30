@@ -19,14 +19,9 @@ const Hero = () => {
 
 
       <div className='backdrop-blur-sm bg-black/10 w-full h-full flex flex-col justify-center items-center'>
-    
-    <h1 className='text-9xl font-bold text-gray-800 blur-none'>
-      
-      WEATHERLY</h1>
-    
-    <h2 className='text-2xl font-bold text-gray-800 blur-none mb-30 mt-7'>
-      
-      Your WEATHER Companion</h2>
+      <h1 className="text-5xl sm:text-7xl md:text-9xl font-bold text-gray-800">WEATHERLY</h1>
+<h2 className="text-lg sm:text-2xl font-semibold text-gray-800 mt-4">Your WEATHER Companion</h2>
+
    
    
    
